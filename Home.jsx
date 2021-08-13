@@ -2,7 +2,8 @@ import { Link, Redirect } from "react-router-dom";
 import { auth, storage, firestore } from "./firebase";
 import { AuthContext } from "./AuthProvider";
 import { useContext, useEffect, useState } from "react";
-
+import { BiLogOutCircle } from "react-icons/bi";
+import { ImProfile } from "react-icons/im";
 import VideoCard from "./VideoCard";
 import "./Home.css";
 
@@ -45,11 +46,14 @@ let Home = () => {
               auth.signOut();
             }}
           >
-            Logout
+            <BiLogOutCircle size="3em" />
           </button>
 
           <Link to="/profile">
-            <button id="profile">Profile</button>
+            <button id="profile">
+              {" "}
+              <ImProfile size="2.5em" />{" "}
+            </button>
           </Link>
 
           <input
@@ -125,6 +129,7 @@ let Home = () => {
             }}
             className="upload-btn"
             type="file"
+            
           />
         </>
       ) : (

@@ -1,30 +1,74 @@
-.logout-btn {
-  position: fixed;
-  bottom: 8rem;
-  right: 2rem;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  border: none;
-  color: rgb(150, 147, 147);
-  background: linear-gradient(145deg, #1c1d21, #17181c);
-  box-shadow: 6px 6px 8px #101114, 2px -1px 15px 2px #ffffff;
-}
-
-.upload-btn {
-  position: fixed;
-  bottom: 3rem;
-  right: 4rem;
-  width: 6rem;
-  display: block;
-}
-
 .posts-container {
   height: 100vh;
   width: 100vw;
   background-color: #dff9fb;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .logout-btn {
+  position: fixed;
+  width: 6rem;
+  bottom: 8rem;
+  right: 2rem;
+  height: 120px;
+  width: 120px;
+  box-shadow: -10px -10px 15px rgba(225, 225, 225, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  border: 8px solid #ececec;
+  outline: none;
+} */
+
+/* .logout-btn::after {
+  font-family: FontAwesome;
+  content: '/f2f5';
+
+} */
+
+
+.logout-btn {
+  position: fixed;
+  bottom: 1px;
+  right: 200px;
+  height: 120px;
+  width: 120px;
+  box-shadow:  -10px -10px 15px rgba(225,225,225,0.5),10px 10px 15px rgba(70,70,70,0.12);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 8px solid #ecec;
+  color: rgb(150, 147, 147);
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+}
+
+.upload-btn {
+  position: fixed;
+  top: 15rem;
+  right: 13rem;
+  width: 7rem;
+  box-shadow:  -10px -10px 15px rgba(225,225,225,0.5),10px 10px 15px rgba(70,70,70,0.12);
+  transform: translate(-50%, -50%);
+  border: 8px solid #ecec;
+  color: rgb(150, 147, 147);
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  display: block;
 }
 
 .video-card {
